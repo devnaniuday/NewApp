@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
 
 use function Laravel\Prompts\table;
 
@@ -75,4 +76,12 @@ require __DIR__.'/auth.php';
 //     foreach($title as $t){
 //         echo $t."<br>";
 //     }
+// });
+
+// Route::get('/order', function(){
+//     DB::table('users')->orderBy('id')->chunk(2, function (Collection $users) {
+//         foreach ($users as $user) {
+//             echo $user->email."<br>";
+//         }
+//     });
 // });
