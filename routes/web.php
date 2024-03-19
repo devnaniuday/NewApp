@@ -69,3 +69,10 @@ require __DIR__.'/auth.php';
 
 //     return $user->email;
 // });
+
+// Route::get('/pluck', function(){
+//     $title = DB::table('users')->pluck( 'email');
+//     foreach($title as $t){
+//         echo $t."<br>";
+//     }
+// });
