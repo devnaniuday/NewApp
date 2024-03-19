@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 
+use function Laravel\Prompts\table;
+
 Route::get('/', function () {
     // $hash = Hash::make("12345678");
 
@@ -50,4 +52,13 @@ require __DIR__.'/auth.php';
     // DB::whenQueryingForLongerThan(50, function () {
         // dd("hello");
     // });
+// });
+
+//Transaction
+// Route::get('/transaction',function(){
+// DB::transaction(function(){
+//     DB::unprepared('create table newtable  (col varchar(1))');
+//     DB::unprepared('insert into newtable values ("a")');
+//     DB::update('update newtable set col="n" where col= "a"');
+// });
 // });
