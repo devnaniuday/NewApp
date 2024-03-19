@@ -62,3 +62,10 @@ require __DIR__.'/auth.php';
 //     DB::update('update newtable set col="n" where col= "a"');
 // });
 // });
+
+// Route::get('/first', function(){
+//     // $user = DB::table('users')->where('name', 'udaydevnani')->first();
+//     $user = DB::table('users')->find(23);
+
+//     return $user->email;
+// });
