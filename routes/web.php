@@ -32,7 +32,7 @@ require __DIR__.'/auth.php';
 //SHOW
 // Route::get('/db', function (){
 //         $users = DB::select('select * from users');
- 
+
 //         foreach($users as $user){
 //             echo "$user->id - $user->email<br>";
 //         }
@@ -50,9 +50,9 @@ require __DIR__.'/auth.php';
 
 //if query takes more than 50ms of time to execute than do this
 // Route::get('/when', function(){
-    // DB::whenQueryingForLongerThan(50, function () {
-        // dd("hello");
-    // });
+// DB::whenQueryingForLongerThan(50, function () {
+// dd("hello");
+// });
 // });
 
 //Transaction
@@ -85,3 +85,27 @@ require __DIR__.'/auth.php';
 //         }
 //     });
 // });
+
+// Route::get('/lazy', function(){
+// DB::table('users')->where('remember_token', null)
+// ->lazyById()->each(function (object $user) {
+//     DB::table('users')
+//     ->where('id', $user->id)
+//     ->update(['remember_token' => null]);
+// });
+// });
+
+Route::get('/aggregate', function(){
+    // $count = DB::table('users')->count();
+    // dump($count);
+
+    //select and get
+    // $users = DB::table('users')
+    // ->select('name', 'email as user_email')
+    // ->get();
+    // foreach($users as $user){
+    //     echo $user->name ." $user->user_email" . "<br>";
+    // }
+
+    
+});
