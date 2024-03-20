@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Collection;
 
+use function Laravel\Prompts\password;
 use function Laravel\Prompts\table;
 
 Route::get('/', function () {
@@ -116,4 +117,53 @@ Route::get('/aggregate', function(){
     //where
     // $users = DB::table('users')->where('remember_token', null)->get();
     // echo $users;
+
+    //wherenull method
+    // $users = DB::table('users')
+    // ->whereNull('remember_token')
+    // ->get();
+    // echo $users;
+
+    //compare columns
+    // $users = DB::table('users')
+    // ->whereColumn('updated_at', '>', 'created_at')
+    // ->get();
+    // echo $users;
+
+    //order by 
+    // $users = DB::table('users')
+    // ->orderBy('id', 'desc')
+    // ->get();
+
+    // $users = DB::table('users')
+    // ->orderBy('name', 'desc')
+    // ->orderBy('email', 'asc')
+    //     ->get();
+
+    // $randomUser = DB::table('users')
+    // ->inRandomOrder()
+    //     ->first();
+    //     echo $randomUser->name;
+
+    // $users = DB::table('users')->skip(1)->take(2)->get();
+    // echo  "<pre>"; print_r($users); "</pre>";
+
+    // $users = DB::table('users')
+    // ->offset(2)
+    //     ->limit(5)
+    //     ->get();
+    //     echo  "<pre>"; print_r($users); "</pre>";
+
+    //insert
+    // DB::table('users')->insert([
+    //     'name' => 'anket',
+    //     'email' => 'anket@gmail.com',
+    //     'password' => '',
+    // ]);
+
+    //delete
+    // $deleted = DB::table('users')
+    //     ->where('remember_token',null)
+    //     ->delete();
+    
 });
