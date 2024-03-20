@@ -107,5 +107,13 @@ Route::get('/aggregate', function(){
     //     echo $user->name ." $user->user_email" . "<br>";
     // }
 
-    
+
+    // $users = DB::table('users')
+    // ->Join('sessions', 'users.id', '=', 'sessions.user_id')
+    // ->get();
+    // echo $users;
+
+    //where
+    // $users = DB::table('users')->where('remember_token', null)->get();
+    // echo $users;
 });
